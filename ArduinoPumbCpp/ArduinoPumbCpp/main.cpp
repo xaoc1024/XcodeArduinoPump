@@ -11,13 +11,23 @@
 #include <iostream>
 #include "Wire.h"
 #include "Arduino.h"
-#include "I2CMemoryManager.h"
-
+//#include "I2CMemoryManager.h"
+#include "Processor.h"
 using namespace std;
 
-I2CMemoryManager manager = I2CMemoryManager(0x50);
+
 
 int main(int argc, const char * argv[]) {
-    PumpData data = manager.read();
+    I2CMemoryManager manager = I2CMemoryManager(0x50);
+    EngineController engine = EngineController();
+
+    PumpController pumpController = PumpController(&engine, &manager);
+    KeyboardManager keyboardManager = KeyboardManager();
+    Processor processor = Processor(&pumpController, &keyboardManager);
+
+    for (int i = 0; i < 100; i++) {
+        processor.tick();
+    }
+
     return 0;
 }

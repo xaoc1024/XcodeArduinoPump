@@ -6,19 +6,18 @@
 //  Copyright © 2019 azhuk. All rights reserved.
 //
 
-#ifndef PumpController_hpp
-#define PumpController_hpp
+#ifndef PumpController_h
+#define PumpController_h
 
-#include <iostream>
 #include "Arduino.h"
 #include "EngineController.h"
 #include "I2CMemoryManager.h"
 
 class PumpController {
 public:
-    PumpController();
-    PumpController(EngineController engine, MemoryManager memoryManager);
-    EngineController engine;
+//    PumpController();
+    PumpController(EngineController *engine, MemoryManager *memoryManager);
+    EngineController *engine;
     MemoryManager *memoryManager;
 
 private:
@@ -28,4 +27,4 @@ private:
 };
 
 
-#endif /* PumpController_hpp */
+#endif /* PumpController_h */

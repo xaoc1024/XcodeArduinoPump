@@ -6,11 +6,9 @@
 //  Copyright © 2019 azhuk. All rights reserved.
 //
 
-#ifndef I2CMemoryManager_hpp
-#define I2CMemoryManager_hpp
+#ifndef I2CMemoryManager_h
+#define I2CMemoryManager_h
 
-//#include <stdio.h>
-#include <iostream>
 #include "Arduino.h"
 
 struct PumpData {
@@ -37,4 +35,4 @@ private:
 };
 
 
-#endif /* I2CMemoryManager_hpp */
+#endif /* I2CMemoryManager_h */

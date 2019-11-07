@@ -6,11 +6,9 @@
 //  Copyright © 2019 azhuk. All rights reserved.
 //
 
-#ifndef EngineController_hpp
-#define EngineController_hpp
+#ifndef EngineController_h
+#define EngineController_h
 
-//#include <stdio.h>
-#include <iostream>
 #include "Arduino.h"
 
 class EngineController
@@ -21,4 +19,4 @@ class EngineController
     void startEngine(int speed);
 };
 
-#endif /* EngineController_hpp */
+#endif /* EngineController_h */

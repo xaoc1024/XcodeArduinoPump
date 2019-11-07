@@ -13,6 +13,7 @@
 		5C46A4602365F37E003D90B1 /* LiquidCrystal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A45E2365F37E003D90B1 /* LiquidCrystal.cpp */; };
 		5C46A46523662ADC003D90B1 /* EngineController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A46323662ADC003D90B1 /* EngineController.cpp */; };
 		5C46A46723662F1F003D90B1 /* Arduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A46623662F1F003D90B1 /* Arduino.cpp */; };
+		5C8EAE1E236EE388000E6D70 /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */; };
 		5C9D06C023677448007469EB /* PumpController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06BE23677448007469EB /* PumpController.cpp */; };
 		5C9D06C3236786CC007469EB /* Processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06C1236786CC007469EB /* Processor.cpp */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,9 @@
 		5C46A46323662ADC003D90B1 /* EngineController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EngineController.cpp; sourceTree = "<group>"; };
 		5C46A46423662ADC003D90B1 /* EngineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineController.h; sourceTree = "<group>"; };
 		5C46A46623662F1F003D90B1 /* Arduino.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Arduino.cpp; path = ArduinoPumbCpp/Libs/Arduino.cpp; sourceTree = SOURCE_ROOT; };
+		5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardManager.cpp; sourceTree = "<group>"; };
+		5C8EAE1D236EE388000E6D70 /* KeyboardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		5C8EAE23236EE4D9000E6D70 /* LoopInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoopInterface.h; sourceTree = "<group>"; };
 		5C9D06BE23677448007469EB /* PumpController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PumpController.cpp; sourceTree = "<group>"; };
 		5C9D06BF23677448007469EB /* PumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpController.h; sourceTree = "<group>"; };
 		5C9D06C1236786CC007469EB /* Processor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Processor.cpp; sourceTree = "<group>"; };
@@ -81,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				5C46A4472365E195003D90B1 /* main.cpp */,
+				5C8EAE24236EE4EC000E6D70 /* Controllers */,
 				5C46A4612366121C003D90B1 /* Definitions.h */,
 				5C46A4572365F37E003D90B1 /* Libs */,
-				5C46A46223661454003D90B1 /* I2CMemoryManager */,
 			);
 			path = ArduinoPumbCpp;
 			sourceTree = "<group>";
@@ -123,14 +127,57 @@
 			children = (
 				5C46A4552365E518003D90B1 /* I2CMemoryManager.h */,
 				5C46A4542365E518003D90B1 /* I2CMemoryManager.cpp */,
-				5C46A46423662ADC003D90B1 /* EngineController.h */,
-				5C46A46323662ADC003D90B1 /* EngineController.cpp */,
-				5C9D06BF23677448007469EB /* PumpController.h */,
-				5C9D06BE23677448007469EB /* PumpController.cpp */,
+			);
+			path = I2CMemoryManager;
+			sourceTree = "<group>";
+		};
+		5C8EAE1F236EE392000E6D70 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C8EAE1D236EE388000E6D70 /* KeyboardManager.h */,
+				5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */,
+			);
+			path = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		5C8EAE20236EE3A5000E6D70 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
 				5C9D06C2236786CC007469EB /* Processor.h */,
 				5C9D06C1236786CC007469EB /* Processor.cpp */,
 			);
-			path = I2CMemoryManager;
+			path = Processor;
+			sourceTree = "<group>";
+		};
+		5C8EAE21236EE3B5000E6D70 /* EngineController */ = {
+			isa = PBXGroup;
+			children = (
+				5C46A46423662ADC003D90B1 /* EngineController.h */,
+				5C46A46323662ADC003D90B1 /* EngineController.cpp */,
+			);
+			path = EngineController;
+			sourceTree = "<group>";
+		};
+		5C8EAE22236EE3C0000E6D70 /* PumpController */ = {
+			isa = PBXGroup;
+			children = (
+				5C46A46223661454003D90B1 /* I2CMemoryManager */,
+				5C8EAE21236EE3B5000E6D70 /* EngineController */,
+				5C9D06BF23677448007469EB /* PumpController.h */,
+				5C9D06BE23677448007469EB /* PumpController.cpp */,
+			);
+			path = PumpController;
+			sourceTree = "<group>";
+		};
+		5C8EAE24236EE4EC000E6D70 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C8EAE23236EE4D9000E6D70 /* LoopInterface.h */,
+				5C8EAE22236EE3C0000E6D70 /* PumpController */,
+				5C8EAE20236EE3A5000E6D70 /* Processor */,
+				5C8EAE1F236EE392000E6D70 /* KeyboardManager */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8EAE1E236EE388000E6D70 /* KeyboardManager.cpp in Sources */,
 				5C46A4602365F37E003D90B1 /* LiquidCrystal.cpp in Sources */,
 				5C46A45F2365F37E003D90B1 /* Wire.cpp in Sources */,
 				5C46A46723662F1F003D90B1 /* Arduino.cpp in Sources */,

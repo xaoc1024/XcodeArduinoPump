@@ -1,11 +1,3 @@
-//
-//  KeyboardManager.h
-//  ArduinoPumpCpp
-//
-//  Created by Andriy Zhuk on 11/3/19.
-//  Copyright © 2019 azhuk. All rights reserved.
-//
-
 #ifndef KeyboardManager_h
 #define KeyboardManager_h
 

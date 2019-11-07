@@ -1,11 +1,3 @@
-//
-//  EngineController.cpp
-//  ArduinoPumbCpp
-//
-//  Created by Andriy Zhuk on 10/27/19.
-//  Copyright © 2019 azhuk. All rights reserved.
-//
-
 #include "EngineController.h"
 
 static byte dirPin = 12;

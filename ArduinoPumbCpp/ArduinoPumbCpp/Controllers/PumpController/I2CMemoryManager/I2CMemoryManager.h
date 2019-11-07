@@ -1,11 +1,3 @@
-//
-//  I2CMemoryManager.h
-//  ArduinoPumbCpp
-//
-//  Created by Andriy Zhuk on 10/27/19.
-//  Copyright © 2019 azhuk. All rights reserved.
-//
-
 #ifndef I2CMemoryManager_h
 #define I2CMemoryManager_h
 

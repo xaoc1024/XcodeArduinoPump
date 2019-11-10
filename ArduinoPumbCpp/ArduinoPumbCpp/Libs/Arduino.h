@@ -10,6 +10,7 @@
 #define Arduino_h
 #include <stdint.h>
 #include <iostream>
+typedef std::string String;
 
 #ifdef __cplusplus
 extern "C"{

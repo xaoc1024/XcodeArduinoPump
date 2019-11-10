@@ -15,7 +15,7 @@ enum KeyboardKey {
 
 class KeyboardManagerDelegate {
 public:
-    virtual void keyaboardManagerDidReadTheKey(KeyboardKey) = 0;
+    virtual void keyboardManagerDidReadKey(KeyboardKey) = 0;
 };
 
 class KeyboardManager: public LoopInterface

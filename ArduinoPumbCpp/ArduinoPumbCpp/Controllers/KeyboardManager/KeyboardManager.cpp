@@ -5,7 +5,7 @@ KeyboardManager::KeyboardManager() { }
 void KeyboardManager::loop() {
     if (this->delegate != NULL) {
         KeyboardKey key = readKey();
-        this->delegate->keyaboardManagerDidReadTheKey(key);
+        this->delegate->keyboardManagerDidReadKey(key);
     }
 }
 

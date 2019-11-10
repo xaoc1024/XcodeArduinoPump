@@ -110,6 +110,8 @@ void LiquidCrystal::noAutoscroll(void) {
 void LiquidCrystal::createChar(uint8_t location, uint8_t charmap[]) {
 }
 
+void LiquidCrystal::print(const String & str) { }
+
 /*********** mid level commands, for sending data/cmds */
 
 //inline void LiquidCrystal::command(uint8_t value) {

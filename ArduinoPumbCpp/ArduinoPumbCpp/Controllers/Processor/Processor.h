@@ -5,20 +5,25 @@
 #include "PumpController.h"
 #include "KeyboardManager.h"
 #include "LoopInterface.h"
+#include "MenuController.h"
 
-class Processor: public LoopInterface, KeyboardManagerDelegate
+class Processor: public LoopInterface, KeyboardManagerDelegate, MenuControllerDelegate
 {
 public:
-    Processor(PumpController *pumpController, KeyboardManager *keyboardManager);
+    Processor(PumpController*, KeyboardManager*, MenuController*);
 
-    PumpController *controller = NULL;
-    KeyboardManager *keyboardManager = NULL;
+    PumpController *controller;
+    KeyboardManager *keyboardManager;
+    MenuController *menuController;
 
     // MAKR: - LoopInterface interface
     void loop();
 
     // MAKR: - KeyboardManagerDelegate interface
-    void keyaboardManagerDidReadTheKey(KeyboardKey);
+    void keyboardManagerDidReadKey(KeyboardKey);
+
+    // MARK: - MenuControllerDelegate
+    void menuControllerDidSelectMenuItem(MenuItem);
 };
 
 #endif /* Processor_h */

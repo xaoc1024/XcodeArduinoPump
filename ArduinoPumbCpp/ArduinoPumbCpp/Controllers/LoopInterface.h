@@ -6,7 +6,7 @@ class LoopInterface
 public:
 //    LoopInterface(){}
 //    virtual ~LoopInterface(){}
-    virtual void tick() = 0;
+    virtual void loop() = 0;
 };
 
 #endif /* LoopInterface_h */

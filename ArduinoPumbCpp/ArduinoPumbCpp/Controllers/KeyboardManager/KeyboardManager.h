@@ -24,7 +24,7 @@ public:
     KeyboardManager();
 
     // MAKR: - LoopInterface interface
-    void tick();
+    void loop();
 
     KeyboardManagerDelegate *delegate;
 

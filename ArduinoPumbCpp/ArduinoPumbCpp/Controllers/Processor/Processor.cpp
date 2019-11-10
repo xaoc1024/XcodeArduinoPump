@@ -8,8 +8,8 @@ Processor::Processor(PumpController *pumpController, KeyboardManager *keyboardMa
 
 // MAKR: - LoopInterface interface
 
-void Processor::tick() {
-    keyboardManager->tick();
+void Processor::loop() {
+    keyboardManager->loop();
 }
 
 // MAKR: - KeyboardManagerDelegate

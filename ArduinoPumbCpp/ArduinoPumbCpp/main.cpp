@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
     Processor processor = Processor(&pumpController, &keyboardManager);
 
     for (int i = 0; i < 100; i++) {
-        processor.tick();
+        processor.loop();
     }
 
     return 0;

@@ -16,6 +16,7 @@
 		5C8EAE1E236EE388000E6D70 /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */; };
 		5C9D06C023677448007469EB /* PumpController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06BE23677448007469EB /* PumpController.cpp */; };
 		5C9D06C3236786CC007469EB /* Processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06C1236786CC007469EB /* Processor.cpp */; };
+		5CAFC7562378665600F01130 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFC7542378665600F01130 /* MenuController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		5C9D06BF23677448007469EB /* PumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpController.h; sourceTree = "<group>"; };
 		5C9D06C1236786CC007469EB /* Processor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Processor.cpp; sourceTree = "<group>"; };
 		5C9D06C2236786CC007469EB /* Processor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		5CAFC7542378665600F01130 /* MenuController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
+		5CAFC7552378665600F01130 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,12 +175,22 @@
 		5C8EAE24236EE4EC000E6D70 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5CAFC7572378665A00F01130 /* MenuController */,
 				5C8EAE23236EE4D9000E6D70 /* LoopInterface.h */,
 				5C8EAE22236EE3C0000E6D70 /* PumpController */,
 				5C8EAE20236EE3A5000E6D70 /* Processor */,
 				5C8EAE1F236EE392000E6D70 /* KeyboardManager */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5CAFC7572378665A00F01130 /* MenuController */ = {
+			isa = PBXGroup;
+			children = (
+				5CAFC7552378665600F01130 /* MenuController.h */,
+				5CAFC7542378665600F01130 /* MenuController.cpp */,
+			);
+			path = MenuController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +255,7 @@
 				5C46A46723662F1F003D90B1 /* Arduino.cpp in Sources */,
 				5C9D06C023677448007469EB /* PumpController.cpp in Sources */,
 				5C46A4482365E195003D90B1 /* main.cpp in Sources */,
+				5CAFC7562378665600F01130 /* MenuController.cpp in Sources */,
 				5C46A4562365E518003D90B1 /* I2CMemoryManager.cpp in Sources */,
 				5C9D06C3236786CC007469EB /* Processor.cpp in Sources */,
 				5C46A46523662ADC003D90B1 /* EngineController.cpp in Sources */,

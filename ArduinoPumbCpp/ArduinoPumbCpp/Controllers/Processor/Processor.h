@@ -9,14 +9,13 @@
 class Processor: public LoopInterface, KeyboardManagerDelegate
 {
 public:
-//    Processor();
     Processor(PumpController *pumpController, KeyboardManager *keyboardManager);
 
     PumpController *controller = NULL;
     KeyboardManager *keyboardManager = NULL;
 
     // MAKR: - LoopInterface interface
-    void tick();
+    void loop();
 
     // MAKR: - KeyboardManagerDelegate interface
     void keyaboardManagerDidReadTheKey(KeyboardKey);

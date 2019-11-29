@@ -1,15 +1,33 @@
 #include "PumpController.h"
 
-static const uint16_t canary = 0xD5A3;
-
-static const float expectedCallibratedMilliliters = 20.0;
-static const float defaultCalibrationCoeficient = 100.0;
-
-PumpController::PumpController(EngineController *engine, MemoryManager *memoryManager) {
+PumpController::PumpController(EngineController *engine, MemoryManager *memoryManager, LiquidCrystal* liquidCrystal) {
     this->engine = engine;
     this->memoryManager = memoryManager;
+    this->lcd = liquidCrystal;
 
-    this->actualCallibratedMilliliters = 0;
-    this->calibrationCoeficient = 0;
-    this->millilitersPerHour = 0;
+    savedConfiguration = memoryManager->read();
+
+    if (savedConfiguration.canary != kDefaultPumpConfiguration.canary) {
+        savedConfiguration = kDefaultPumpConfiguration;
+        memoryManager->write(kDefaultPumpConfiguration);
+    }
+}
+
+// MARK: - KeyPressable
+void PumpController::pressKey(KeyboardKey theKey) {
+    
+}
+
+void PumpController::run() {
+    lcd->clear();
+    lcd->setCursor(0, 0);
+    lcd->print("ml/h:");
+    lcd->setCursor(0,1);
+    lcd->print(savedConfiguration.millilitersPerHour);
+
+    engine->startEngine(savedConfiguration.millilitersPerHour * savedConfiguration.calibrationCoeficient);
+}
+
+void PumpController::stop() {
+    engine->stopEngine();
 }

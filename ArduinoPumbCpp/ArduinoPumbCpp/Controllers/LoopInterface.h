@@ -4,8 +4,6 @@
 class LoopInterface
 {
 public:
-//    LoopInterface(){}
-//    virtual ~LoopInterface(){}
     virtual void loop() = 0;
 };
 

@@ -79,6 +79,7 @@ public:
   void noAutoscroll();
 
   void print(const String &);
+  void print(const int & value);
 
   void setRowOffsets(int row1, int row2, int row3, int row4);
   void createChar(uint8_t, uint8_t[]);

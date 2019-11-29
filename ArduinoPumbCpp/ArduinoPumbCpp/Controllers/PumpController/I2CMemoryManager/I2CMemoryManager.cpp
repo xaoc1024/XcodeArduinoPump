@@ -8,17 +8,17 @@ I2CMemoryManager::I2CMemoryManager(int address){
     Wire.setClock(400000);
 }
 
-void I2CMemoryManager::write(PumpData data)  {
+void I2CMemoryManager::write(PumpConfiguration data)  {
     uint8_t *dataPtr = (uint8_t*)&data;
 
     Wire.beginTransmission(deviceAddress);
     Wire.write(0);
-    Wire.write(dataPtr, sizeof(PumpData));
+    Wire.write(dataPtr, sizeof(PumpConfiguration));
     Wire.endTransmission();
 }
 
-PumpData I2CMemoryManager::read() {
-    int sizeOfData = sizeof(PumpData);
+PumpConfiguration I2CMemoryManager::read() {
+    int sizeOfData = sizeof(PumpConfiguration);
 
     Wire.beginTransmission(deviceAddress);
     Wire.write(0);
@@ -33,8 +33,8 @@ PumpData I2CMemoryManager::read() {
         reading[i] = Wire.read();
     }
     
-    PumpData *data;
-    data = (PumpData*)reading;
+    PumpConfiguration *data;
+    data = (PumpConfiguration*)reading;
 
     return *data;
 }

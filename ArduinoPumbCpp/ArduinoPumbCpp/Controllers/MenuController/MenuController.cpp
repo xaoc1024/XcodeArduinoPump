@@ -2,28 +2,28 @@
 
 MenuController::MenuController(LiquidCrystal *lcd) {
     MenuItem defaultItem;
-    menuItems[MenuItemTypeDefault].title = "Default";
-    menuItems[MenuItemTypeDefault].type = MenuItemTypeDefault;
+    menuItems[MenuItemTypeRun].title = "Default";
+    menuItems[MenuItemTypeRun].type = MenuItemTypeRun;
 
-    menuItems[MenuItemTypeCalibration].title = "Calibration";
-    menuItems[MenuItemTypeCalibration].type = MenuItemTypeCalibration;
+    menuItems[MenuItemTypeCalibrate].title = "Calibration";
+    menuItems[MenuItemTypeCalibrate].type = MenuItemTypeCalibrate;
 
     menuItems[MenuItemTypeRegime].title = "Regime";
     menuItems[MenuItemTypeRegime].type = MenuItemTypeRegime;
 
-    isMenuOnShown = false;
-    currentlyPresentedItem = MenuItemTypeDefault;
+    isMenuShown = false;
+    currentlyPresentedItem = MenuItemTypeRun;
 
     lcd = lcd;//LiquidCrystal(8, 9, 4, 5, 6, 7);
 }
 
 void MenuController::showMenu() {
-    isMenuOnShown = true;
+    isMenuShown = true;
     showCurrentItem();
 }
 
 void MenuController::hideMenu() {
-    isMenuOnShown = true;
+    isMenuShown = true;
     lcd->clear();
 }
 

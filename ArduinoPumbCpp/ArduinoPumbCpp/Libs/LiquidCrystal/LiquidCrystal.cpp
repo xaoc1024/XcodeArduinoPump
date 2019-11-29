@@ -111,6 +111,7 @@ void LiquidCrystal::createChar(uint8_t location, uint8_t charmap[]) {
 }
 
 void LiquidCrystal::print(const String & str) { }
+void LiquidCrystal::print(const int & value) { }
 
 /*********** mid level commands, for sending data/cmds */
 

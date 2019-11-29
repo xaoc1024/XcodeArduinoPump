@@ -4,10 +4,11 @@
 #include "Arduino.h"
 #include "KeyboardManager.h"
 #include "LiquidCrystal.h"
+#include "KeyPressable.h"
 
 enum MenuItemType {
-    MenuItemTypeDefault = 0,
-    MenuItemTypeCalibration,
+    MenuItemTypeRun = 0,
+    MenuItemTypeCalibrate,
     MenuItemTypeRegime,
     MenuItemTypeCount
 };
@@ -22,18 +23,19 @@ public:
     virtual void menuControllerDidSelectMenuItem(MenuItem) = 0;
 };
 
-
-class MenuController {
+class MenuController: public KeyPressable {
 public:
     MenuController(LiquidCrystal*);
     MenuControllerDelegate *delegate;
 
     void showMenu();
     void hideMenu();
+
+    // MARK: - KeyPressable
     void pressKey(KeyboardKey);
     
 private:
-    bool isMenuOnShown;
+    bool isMenuShown;
     MenuItemType currentlyPresentedItem;
     MenuItem menuItems[MenuItemTypeCount];
     LiquidCrystal *lcd;

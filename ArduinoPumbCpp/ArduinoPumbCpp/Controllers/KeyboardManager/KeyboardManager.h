@@ -3,15 +3,7 @@
 
 #include "Arduino.h"
 #include "LoopInterface.h"
-
-enum KeyboardKey {
-    KeyboardKeySelect,
-    KeyboardKeyUp,
-    KeyboardKeyDown,
-    KeyboardKeyLeft,
-    KeyboardKeyRight,
-    KeyboardKeyNone
-};
+#include "KeyPressable.h"
 
 class KeyboardManagerDelegate {
 public:

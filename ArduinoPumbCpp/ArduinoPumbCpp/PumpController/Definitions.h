@@ -13,5 +13,10 @@ static PumpConfiguration kDefaultPumpConfiguration = {
     .speedToMillilitersRatio = 100.0
 };
 
+static unsigned int kCalibrationSpeed = 6000; // TODO: set the appropriate number to make calibration process decent
+static unsigned long kSecond = 1000; // in milliseconds
+static unsigned long kMinute = 60 * kSecond;
+static unsigned long kHour = 60 * kMinute;
+static unsigned long kCalibrationTime = kMinute;
 
 #endif /* Definitions_h */

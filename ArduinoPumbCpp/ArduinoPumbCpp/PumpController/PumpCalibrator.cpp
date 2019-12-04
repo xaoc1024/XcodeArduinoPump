@@ -1,9 +1,5 @@
 #include "PumpCalibrator.h"
-
-#define CALIBRATION_SPEED 6000 // TODO: set the appropriate number to make calibration process decent
-#define MINUTE (60 * 1000) // in milliseconds
-#define HOUR (60 * MINUTE) // in milliseconds
-#define CALIBRATION_TIME MINUTE // in milliseconds
+#include "Definitions.h"
 
 PumpCalibrator::PumpCalibrator(EngineController *engine, LiquidCrystal* liquidCrystal) {
     this->engine = engine;
@@ -15,9 +11,9 @@ void PumpCalibrator::calibrate() {
     lcd->setCursor(0, 0);
     lcd->print("Calibrating...");
 
-    engine->startEngine(CALIBRATION_SPEED, CALIBRATION_TIME);
+    engine->startEngine(kCalibrationSpeed, kCalibrationTime);
 
-    delay(CALIBRATION_TIME);
+    delay(kCalibrationTime);
     printCalibration(calibratedVolume);
 }
 
@@ -45,7 +41,7 @@ void PumpCalibrator::pressKey(KeyboardKey theKey) {
 
         case KeyboardKeySelect:
             if (delegate != NULL) {
-                delegate->pumpCalibratorDidFinishWithSpeedToMillilitersRatio(CALIBRATION_SPEED / (calibratedVolume * (HOUR / float(CALIBRATION_TIME))));
+                delegate->pumpCalibratorDidFinishWithSpeedToMillilitersRatio(kCalibrationSpeed / (calibratedVolume * (kHour / float(kCalibrationTime))));
             }
             break;
 

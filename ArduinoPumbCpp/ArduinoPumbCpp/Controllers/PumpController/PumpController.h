@@ -9,7 +9,7 @@
 
 class PumpControllerDelegate {
 public:
-    virtual void pumpControllerDid() = 0;
+    virtual void pumpControllerDidPressMenu() = 0;
 };
 
 class PumpController: public KeyPressable {
@@ -20,14 +20,20 @@ public:
     MemoryManager *memoryManager;
     LiquidCrystal *lcd;
 
+    PumpControllerDelegate *delegate;
+
     // MARK: - KeyPressable
     void pressKey(KeyboardKey);
 
     void run();
     void stop();
 
+    void calibrate();
+
 private:
-    PumpConfiguration savedConfiguration;
+    PumpConfiguration pumpConfiguration;
+    void increaseSpeed();
+    void decreaseSpeed();
 };
 
 

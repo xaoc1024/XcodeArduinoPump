@@ -2,16 +2,14 @@
 
 Processor::Processor(PumpController *pumpController, KeyboardManager *keyboardManager, MenuController *menuController) {
     this->pumpController = pumpController;
+    this->pumpController->delegate = this;
 
     this->keyboardManager = keyboardManager;
     this->keyboardManager->delegate = this;
 
     this->menuController = menuController;
     this->menuController->delegate = this;
-
     this->menuController->showMenu();
-    this->state = ProcessorStateMenu;
-
     this->currentKeyHandler = menuController;
 }
 
@@ -24,16 +22,6 @@ void Processor::loop() {
 // MAKR: - KeyboardManagerDelegate
 void Processor::keyboardManagerDidReadKey(KeyboardKey theKey) {
     currentKeyHandler->pressKey(theKey);
-//
-//    switch (state) {
-//        case ProcessorStateMenu:
-//            menuController->pressKey(theKey);
-//
-//        case ProcessorStateRunning:
-//
-//        default:
-//            break;
-//    }
 }
 
 // MARK: - MenuControllerDelegate
@@ -42,14 +30,21 @@ void Processor::menuControllerDidSelectMenuItem(MenuItem menuItem) {
     switch (menuItem.type) {
         case MenuItemTypeRun:
             currentKeyHandler = pumpController;
-//            pumpController->
+            pumpController->run();
 
         case MenuItemTypeCalibrate:
-            setState(ProcessorStateCalibration);
+
 
         default:
             break;
     }
+}
+
+// MARK: - PumpControllerDelegate
+
+void Processor::pumpControllerDidPressMenu() {
+    this->menuController->showMenu();
+    this->currentKeyHandler = menuController;
 }
 
 void Processor::setState(ProcessorState newState) {

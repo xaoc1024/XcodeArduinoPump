@@ -16,6 +16,6 @@ void EngineController::stopEngine() {
     noTone(stepPin);
 }
 
-void EngineController::startEngine(int speed) {
-    tone(stepPin, speed);
+void EngineController::startEngine(unsigned int speed, unsigned long time) {
+    tone(stepPin, speed, time);
 }

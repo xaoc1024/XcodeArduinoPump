@@ -134,7 +134,7 @@ extern "C"{
     void setup(void);
     void loop(void);
 
-    void tone(int, int);
+    void tone(uint8_t _pin, unsigned int frequency, unsigned long duration = 0);
     void noTone(int);
     
     // Get the bit location within the hardware port of the given virtual pin.

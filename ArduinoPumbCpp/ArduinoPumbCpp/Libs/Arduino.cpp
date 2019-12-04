@@ -47,4 +47,5 @@ void setup() {}
 void loop() {}
 
 void tone(int one, int two) {}
+void tone(uint8_t _pin, unsigned int frequency, unsigned long duration) {}
 void noTone(int one) {}

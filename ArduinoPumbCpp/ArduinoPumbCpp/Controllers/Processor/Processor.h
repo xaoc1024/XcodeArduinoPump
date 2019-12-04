@@ -14,7 +14,7 @@ enum ProcessorState {
     ProcessorStateCalibration
 };
 
-class Processor: public LoopInterface, KeyboardManagerDelegate, MenuControllerDelegate
+class Processor: public LoopInterface, KeyboardManagerDelegate, MenuControllerDelegate, PumpControllerDelegate
 {
 public:
     Processor(PumpController*, KeyboardManager*, MenuController*);
@@ -31,6 +31,9 @@ public:
 
     // MARK: - MenuControllerDelegate
     void menuControllerDidSelectMenuItem(MenuItem);
+
+    // MARK: - PumpControllerDelegate
+    void pumpControllerDidPressMenu();
 
 private:
     KeyPressable *currentKeyHandler;

@@ -7,8 +7,8 @@ class EngineController
 {
     public:
     EngineController();
+    void startEngine(unsigned int speed, unsigned long time = 0);
     void stopEngine();
-    void startEngine(int speed);
 };
 
 #endif /* EngineController_h */

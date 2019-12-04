@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C0F7F55239420B6009D87A2 /* PumpCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C0F7F53239420B6009D87A2 /* PumpCalibrator.cpp */; };
 		5C46A4482365E195003D90B1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A4472365E195003D90B1 /* main.cpp */; };
-		5C46A4562365E518003D90B1 /* I2CMemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A4542365E518003D90B1 /* I2CMemoryManager.cpp */; };
 		5C46A45F2365F37E003D90B1 /* Wire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A45B2365F37E003D90B1 /* Wire.cpp */; };
 		5C46A4602365F37E003D90B1 /* LiquidCrystal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A45E2365F37E003D90B1 /* LiquidCrystal.cpp */; };
-		5C46A46523662ADC003D90B1 /* EngineController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A46323662ADC003D90B1 /* EngineController.cpp */; };
 		5C46A46723662F1F003D90B1 /* Arduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C46A46623662F1F003D90B1 /* Arduino.cpp */; };
-		5C8EAE1E236EE388000E6D70 /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */; };
-		5C9D06C023677448007469EB /* PumpController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06BE23677448007469EB /* PumpController.cpp */; };
-		5C9D06C3236786CC007469EB /* Orchestrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C9D06C1236786CC007469EB /* Orchestrator.cpp */; };
-		5CAFC7562378665600F01130 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFC7542378665600F01130 /* MenuController.cpp */; };
+		5C4D8CF823982FB700FA14C7 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CED23982E4900FA14C7 /* MenuController.cpp */; };
+		5C4D8CF923982FB700FA14C7 /* I2CMemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CF023982E4900FA14C7 /* I2CMemoryManager.cpp */; };
+		5C4D8CFA23982FB700FA14C7 /* PumpCalibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CE323982E4900FA14C7 /* PumpCalibrator.cpp */; };
+		5C4D8CFB23982FB700FA14C7 /* EngineController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CE523982E4900FA14C7 /* EngineController.cpp */; };
+		5C4D8CFC23982FB700FA14C7 /* PumpController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CE423982E4900FA14C7 /* PumpController.cpp */; };
+		5C4D8CFD23982FB700FA14C7 /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CEA23982E4900FA14C7 /* KeyboardManager.cpp */; };
+		5C4D8CFE23982FB700FA14C7 /* Orchestrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C4D8CE923982E4900FA14C7 /* Orchestrator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,32 +33,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C0F7F53239420B6009D87A2 /* PumpCalibrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PumpCalibrator.cpp; sourceTree = "<group>"; };
-		5C0F7F54239420B6009D87A2 /* PumpCalibrator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpCalibrator.h; sourceTree = "<group>"; };
-		5C2A2BA5237F22420041914E /* KeyPressable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPressable.h; sourceTree = "<group>"; };
 		5C46A4442365E195003D90B1 /* ArduinoPumpCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ArduinoPumpCpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C46A4472365E195003D90B1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5C46A4532365E344003D90B1 /* Arduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
-		5C46A4542365E518003D90B1 /* I2CMemoryManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = I2CMemoryManager.cpp; sourceTree = "<group>"; };
-		5C46A4552365E518003D90B1 /* I2CMemoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = I2CMemoryManager.h; sourceTree = "<group>"; };
 		5C46A4592365F37E003D90B1 /* Wire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wire.h; sourceTree = "<group>"; };
 		5C46A45A2365F37E003D90B1 /* inttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inttypes.h; sourceTree = "<group>"; };
 		5C46A45B2365F37E003D90B1 /* Wire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wire.cpp; sourceTree = "<group>"; };
 		5C46A45D2365F37E003D90B1 /* LiquidCrystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiquidCrystal.h; sourceTree = "<group>"; };
 		5C46A45E2365F37E003D90B1 /* LiquidCrystal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LiquidCrystal.cpp; sourceTree = "<group>"; };
-		5C46A4612366121C003D90B1 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
-		5C46A46323662ADC003D90B1 /* EngineController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EngineController.cpp; sourceTree = "<group>"; };
-		5C46A46423662ADC003D90B1 /* EngineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineController.h; sourceTree = "<group>"; };
 		5C46A46623662F1F003D90B1 /* Arduino.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Arduino.cpp; path = ArduinoPumbCpp/Libs/Arduino.cpp; sourceTree = SOURCE_ROOT; };
-		5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardManager.cpp; sourceTree = "<group>"; };
-		5C8EAE1D236EE388000E6D70 /* KeyboardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
-		5C8EAE23236EE4D9000E6D70 /* LoopInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoopInterface.h; sourceTree = "<group>"; };
-		5C9D06BE23677448007469EB /* PumpController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PumpController.cpp; sourceTree = "<group>"; };
-		5C9D06BF23677448007469EB /* PumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpController.h; sourceTree = "<group>"; };
-		5C9D06C1236786CC007469EB /* Orchestrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Orchestrator.cpp; sourceTree = "<group>"; };
-		5C9D06C2236786CC007469EB /* Orchestrator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Orchestrator.h; sourceTree = "<group>"; };
-		5CAFC7542378665600F01130 /* MenuController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
-		5CAFC7552378665600F01130 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		5C4D8CDF23982E4900FA14C7 /* KeyPressable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPressable.h; sourceTree = "<group>"; };
+		5C4D8CE023982E4900FA14C7 /* PumpController.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = PumpController.ino; sourceTree = "<group>"; };
+		5C4D8CE123982E4900FA14C7 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		5C4D8CE223982E4900FA14C7 /* EngineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EngineController.h; sourceTree = "<group>"; };
+		5C4D8CE323982E4900FA14C7 /* PumpCalibrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PumpCalibrator.cpp; sourceTree = "<group>"; };
+		5C4D8CE423982E4900FA14C7 /* PumpController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PumpController.cpp; sourceTree = "<group>"; };
+		5C4D8CE523982E4900FA14C7 /* EngineController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EngineController.cpp; sourceTree = "<group>"; };
+		5C4D8CE623982E4900FA14C7 /* I2CMemoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = I2CMemoryManager.h; sourceTree = "<group>"; };
+		5C4D8CE723982E4900FA14C7 /* PumpCalibrator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpCalibrator.h; sourceTree = "<group>"; };
+		5C4D8CE823982E4900FA14C7 /* LoopInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoopInterface.h; sourceTree = "<group>"; };
+		5C4D8CE923982E4900FA14C7 /* Orchestrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Orchestrator.cpp; sourceTree = "<group>"; };
+		5C4D8CEA23982E4900FA14C7 /* KeyboardManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardManager.cpp; sourceTree = "<group>"; };
+		5C4D8CEB23982E4900FA14C7 /* Orchestrator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Orchestrator.h; sourceTree = "<group>"; };
+		5C4D8CEC23982E4900FA14C7 /* KeyboardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		5C4D8CED23982E4900FA14C7 /* MenuController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
+		5C4D8CEE23982E4900FA14C7 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		5C4D8CEF23982E4900FA14C7 /* PumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PumpController.h; sourceTree = "<group>"; };
+		5C4D8CF023982E4900FA14C7 /* I2CMemoryManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = I2CMemoryManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C0F7F57239420E5009D87A2 /* PumpCalibrator */ = {
-			isa = PBXGroup;
-			children = (
-				5C0F7F54239420B6009D87A2 /* PumpCalibrator.h */,
-				5C0F7F53239420B6009D87A2 /* PumpCalibrator.cpp */,
-			);
-			path = PumpCalibrator;
-			sourceTree = "<group>";
-		};
 		5C46A43B2365E195003D90B1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5C46A4472365E195003D90B1 /* main.cpp */,
-				5C8EAE24236EE4EC000E6D70 /* PumpController */,
+				5C4D8CDE23982E4900FA14C7 /* PumpController */,
 				5C46A4572365F37E003D90B1 /* Libs */,
 			);
 			path = ArduinoPumbCpp;
@@ -137,75 +129,85 @@
 			path = LiquidCrystal;
 			sourceTree = "<group>";
 		};
-		5C46A46223661454003D90B1 /* I2CMemoryManager */ = {
+		5C4D8CDE23982E4900FA14C7 /* PumpController */ = {
 			isa = PBXGroup;
 			children = (
-				5C46A4552365E518003D90B1 /* I2CMemoryManager.h */,
-				5C46A4542365E518003D90B1 /* I2CMemoryManager.cpp */,
-			);
-			path = I2CMemoryManager;
-			sourceTree = "<group>";
-		};
-		5C8EAE1F236EE392000E6D70 /* KeyboardManager */ = {
-			isa = PBXGroup;
-			children = (
-				5C8EAE1D236EE388000E6D70 /* KeyboardManager.h */,
-				5C8EAE1C236EE388000E6D70 /* KeyboardManager.cpp */,
-			);
-			path = KeyboardManager;
-			sourceTree = "<group>";
-		};
-		5C8EAE20236EE3A5000E6D70 /* Processor */ = {
-			isa = PBXGroup;
-			children = (
-				5C9D06C2236786CC007469EB /* Orchestrator.h */,
-				5C9D06C1236786CC007469EB /* Orchestrator.cpp */,
-			);
-			path = Processor;
-			sourceTree = "<group>";
-		};
-		5C8EAE21236EE3B5000E6D70 /* EngineController */ = {
-			isa = PBXGroup;
-			children = (
-				5C46A46423662ADC003D90B1 /* EngineController.h */,
-				5C46A46323662ADC003D90B1 /* EngineController.cpp */,
-			);
-			path = EngineController;
-			sourceTree = "<group>";
-		};
-		5C8EAE22236EE3C0000E6D70 /* PumpController */ = {
-			isa = PBXGroup;
-			children = (
-				5C46A46223661454003D90B1 /* I2CMemoryManager */,
-				5C8EAE21236EE3B5000E6D70 /* EngineController */,
-				5C0F7F57239420E5009D87A2 /* PumpCalibrator */,
-				5C9D06BF23677448007469EB /* PumpController.h */,
-				5C9D06BE23677448007469EB /* PumpController.cpp */,
+				5C4D8CE023982E4900FA14C7 /* PumpController.ino */,
+				5C4D8CEE23982E4900FA14C7 /* Definitions.h */,
+				5C4D8CDF23982E4900FA14C7 /* KeyPressable.h */,
+				5C4D8CE823982E4900FA14C7 /* LoopInterface.h */,
+				5C4D8CF623982F0500FA14C7 /* MenuController */,
+				5C4D8CF723982F2000FA14C7 /* PumpController */,
+				5C4D8CF523982ED200FA14C7 /* KeyboardManager */,
+				5C4D8CF423982EBC00FA14C7 /* Orchestrator */,
 			);
 			path = PumpController;
 			sourceTree = "<group>";
 		};
-		5C8EAE24236EE4EC000E6D70 /* PumpController */ = {
+		5C4D8CF123982E5600FA14C7 /* EngineController */ = {
 			isa = PBXGroup;
 			children = (
-				5C46A4612366121C003D90B1 /* Definitions.h */,
-				5C8EAE23236EE4D9000E6D70 /* LoopInterface.h */,
-				5C2A2BA5237F22420041914E /* KeyPressable.h */,
-				5CAFC7572378665A00F01130 /* MenuController */,
-				5C8EAE22236EE3C0000E6D70 /* PumpController */,
-				5C8EAE20236EE3A5000E6D70 /* Processor */,
-				5C8EAE1F236EE392000E6D70 /* KeyboardManager */,
+				5C4D8CE523982E4900FA14C7 /* EngineController.cpp */,
+				5C4D8CE223982E4900FA14C7 /* EngineController.h */,
 			);
-			path = PumpController;
+			name = EngineController;
 			sourceTree = "<group>";
 		};
-		5CAFC7572378665A00F01130 /* MenuController */ = {
+		5C4D8CF223982E7900FA14C7 /* PumpCalibrator */ = {
 			isa = PBXGroup;
 			children = (
-				5CAFC7552378665600F01130 /* MenuController.h */,
-				5CAFC7542378665600F01130 /* MenuController.cpp */,
+				5C4D8CE323982E4900FA14C7 /* PumpCalibrator.cpp */,
+				5C4D8CE723982E4900FA14C7 /* PumpCalibrator.h */,
 			);
-			path = MenuController;
+			name = PumpCalibrator;
+			sourceTree = "<group>";
+		};
+		5C4D8CF323982E9C00FA14C7 /* I2CMemoryManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D8CE623982E4900FA14C7 /* I2CMemoryManager.h */,
+				5C4D8CF023982E4900FA14C7 /* I2CMemoryManager.cpp */,
+			);
+			name = I2CMemoryManager;
+			sourceTree = "<group>";
+		};
+		5C4D8CF423982EBC00FA14C7 /* Orchestrator */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D8CE923982E4900FA14C7 /* Orchestrator.cpp */,
+				5C4D8CEB23982E4900FA14C7 /* Orchestrator.h */,
+			);
+			name = Orchestrator;
+			sourceTree = "<group>";
+		};
+		5C4D8CF523982ED200FA14C7 /* KeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D8CEA23982E4900FA14C7 /* KeyboardManager.cpp */,
+				5C4D8CEC23982E4900FA14C7 /* KeyboardManager.h */,
+			);
+			name = KeyboardManager;
+			sourceTree = "<group>";
+		};
+		5C4D8CF623982F0500FA14C7 /* MenuController */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D8CE123982E4900FA14C7 /* MenuController.h */,
+				5C4D8CED23982E4900FA14C7 /* MenuController.cpp */,
+			);
+			name = MenuController;
+			sourceTree = "<group>";
+		};
+		5C4D8CF723982F2000FA14C7 /* PumpController */ = {
+			isa = PBXGroup;
+			children = (
+				5C4D8CF323982E9C00FA14C7 /* I2CMemoryManager */,
+				5C4D8CF223982E7900FA14C7 /* PumpCalibrator */,
+				5C4D8CF123982E5600FA14C7 /* EngineController */,
+				5C4D8CE423982E4900FA14C7 /* PumpController.cpp */,
+				5C4D8CEF23982E4900FA14C7 /* PumpController.h */,
+			);
+			name = PumpController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,17 +266,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C8EAE1E236EE388000E6D70 /* KeyboardManager.cpp in Sources */,
+				5C4D8CFD23982FB700FA14C7 /* KeyboardManager.cpp in Sources */,
 				5C46A4602365F37E003D90B1 /* LiquidCrystal.cpp in Sources */,
+				5C4D8CFA23982FB700FA14C7 /* PumpCalibrator.cpp in Sources */,
+				5C4D8CF823982FB700FA14C7 /* MenuController.cpp in Sources */,
 				5C46A45F2365F37E003D90B1 /* Wire.cpp in Sources */,
+				5C4D8CFC23982FB700FA14C7 /* PumpController.cpp in Sources */,
 				5C46A46723662F1F003D90B1 /* Arduino.cpp in Sources */,
-				5C9D06C023677448007469EB /* PumpController.cpp in Sources */,
+				5C4D8CFE23982FB700FA14C7 /* Orchestrator.cpp in Sources */,
 				5C46A4482365E195003D90B1 /* main.cpp in Sources */,
-				5CAFC7562378665600F01130 /* MenuController.cpp in Sources */,
-				5C46A4562365E518003D90B1 /* I2CMemoryManager.cpp in Sources */,
-				5C9D06C3236786CC007469EB /* Orchestrator.cpp in Sources */,
-				5C0F7F55239420B6009D87A2 /* PumpCalibrator.cpp in Sources */,
-				5C46A46523662ADC003D90B1 /* EngineController.cpp in Sources */,
+				5C4D8CF923982FB700FA14C7 /* I2CMemoryManager.cpp in Sources */,
+				5C4D8CFB23982FB700FA14C7 /* EngineController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

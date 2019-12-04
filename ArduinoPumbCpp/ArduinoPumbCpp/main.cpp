@@ -1,14 +1,3 @@
-//
-//  main.cpp
-//  ArduinoPumbCpp
-//
-//  Created by Andriy Zhuk on 10/27/19.
-//  Copyright © 2019 azhuk. All rights reserved.
-//
-
-#define XCODE
-
-#include <iostream>
 #include "Orchestrator.h"
 
 int main(int argc, const char * argv[]) {

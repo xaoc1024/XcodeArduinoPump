@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include "Orchestrator.h"
-using namespace std;
 
 int main(int argc, const char * argv[]) {
     I2CMemoryManager manager = I2CMemoryManager(0x50);

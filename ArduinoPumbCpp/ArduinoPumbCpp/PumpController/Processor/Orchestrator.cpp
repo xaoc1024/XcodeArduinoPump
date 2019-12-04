@@ -23,6 +23,7 @@ void Orchestrator::loop() {
 }
 
 // MAKR: - KeyboardManagerDelegate
+
 void Orchestrator::keyboardManagerDidReadKey(KeyboardKey theKey) {
     currentKeyHandler->pressKey(theKey);
 }

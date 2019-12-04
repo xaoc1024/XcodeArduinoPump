@@ -1,8 +1,6 @@
 #ifndef Definitions_h
 #define Definitions_h
 
-#define XCODE
-
 struct PumpConfiguration {
     uint16_t canary;
     float millilitersPerHour;

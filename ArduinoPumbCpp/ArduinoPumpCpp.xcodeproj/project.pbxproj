@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5C46A4472365E195003D90B1 /* main.cpp */,
-				5C8EAE24236EE4EC000E6D70 /* Controllers */,
+				5C8EAE24236EE4EC000E6D70 /* PumpController */,
 				5C46A4572365F37E003D90B1 /* Libs */,
 			);
 			path = ArduinoPumbCpp;
@@ -185,7 +185,7 @@
 			path = PumpController;
 			sourceTree = "<group>";
 		};
-		5C8EAE24236EE4EC000E6D70 /* Controllers */ = {
+		5C8EAE24236EE4EC000E6D70 /* PumpController */ = {
 			isa = PBXGroup;
 			children = (
 				5C46A4612366121C003D90B1 /* Definitions.h */,
@@ -196,7 +196,7 @@
 				5C8EAE20236EE3A5000E6D70 /* Processor */,
 				5C8EAE1F236EE392000E6D70 /* KeyboardManager */,
 			);
-			path = Controllers;
+			path = PumpController;
 			sourceTree = "<group>";
 		};
 		5CAFC7572378665A00F01130 /* MenuController */ = {

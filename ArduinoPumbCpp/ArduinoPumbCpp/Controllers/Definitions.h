@@ -6,13 +6,13 @@
 struct PumpConfiguration {
     uint16_t canary;
     float millilitersPerHour;
-    float speedCoeficient;
+    float speedToMillilitersRatio;
 };
 
 static PumpConfiguration kDefaultPumpConfiguration = {
     .canary = 0xD5A3,
     .millilitersPerHour = 20.0,
-    .speedCoeficient = 100.0
+    .speedToMillilitersRatio = 100.0
 };
 
 

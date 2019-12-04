@@ -9,12 +9,7 @@
 #define XCODE
 
 #include <iostream>
-#include "Wire.h"
-#include "Arduino.h"
-#include "LiquidCrystal.h"
-
-//#include "I2CMemoryManager.h"
-#include "Processor.h"
+#include "Orchestrator.h"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -25,11 +20,12 @@ int main(int argc, const char * argv[]) {
     PumpController pumpController = PumpController(&engine, &manager, &lcd);
     KeyboardManager keyboardManager = KeyboardManager();
     MenuController menuController = MenuController(&lcd);
+    PumpCalibrator pumpCalibrator = PumpCalibrator(&engine, &lcd);
 
-    Processor processor = Processor(&pumpController, &keyboardManager, &menuController);
+    Orchestrator orchestrator = Orchestrator(&pumpController, &keyboardManager, &menuController, &pumpCalibrator);
 
     for (int i = 0; i < 100; i++) {
-        processor.loop();
+        orchestrator.loop();
     }
 
     return 0;

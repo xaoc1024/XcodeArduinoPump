@@ -38,31 +38,36 @@ void PumpController::pressKey(KeyboardKey theKey) {
 void PumpController::run() {
     lcd->clear();
     lcd->setCursor(0, 0);
-    lcd->print("ml/h:");
+    lcd->print("ML/H:");
     lcd->setCursor(0, 1);
     lcd->print(pumpConfiguration.millilitersPerHour);
 
-    engine->startEngine(round(pumpConfiguration.millilitersPerHour * pumpConfiguration.speedCoeficient));
+    engine->startEngine((unsigned int)round(pumpConfiguration.millilitersPerHour * pumpConfiguration.speedToMillilitersRatio));
 }
 
 void PumpController::stop() {
     engine->stopEngine();
 }
 
-void PumpController::calibrate() {
-
+void PumpController::applyCalibratedSpeedRatio(float speedToMillilitersRatio) {
+    pumpConfiguration.speedToMillilitersRatio = speedToMillilitersRatio;
+    saveConfiguration();
 }
 
 void PumpController::increaseSpeed() {
     pumpConfiguration.millilitersPerHour += 1;
-    memoryManager->write(pumpConfiguration);
+    saveConfiguration();
     this->run();
 }
 
 void PumpController::decreaseSpeed() {
     if (pumpConfiguration.millilitersPerHour > 1) {
         pumpConfiguration.millilitersPerHour -= 1;
-        memoryManager->write(pumpConfiguration);
+        saveConfiguration();
         this->run();
     }
+}
+
+void PumpController::saveConfiguration() {
+    memoryManager->write(pumpConfiguration);
 }

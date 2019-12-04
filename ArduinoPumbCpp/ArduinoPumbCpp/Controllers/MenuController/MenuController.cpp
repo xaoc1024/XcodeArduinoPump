@@ -51,8 +51,7 @@ void MenuController::pressKey(KeyboardKey key) {
             }
             break;
         }
-
-
+            
         default: break;
     }
 }

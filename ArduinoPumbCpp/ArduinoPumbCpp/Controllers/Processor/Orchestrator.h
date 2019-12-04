@@ -1,27 +1,22 @@
-#ifndef Processor_h
-#define Processor_h
+#ifndef Orchestrator_h
+#define Orchestrator_h
 
 #include "Arduino.h"
 #include "PumpController.h"
 #include "KeyboardManager.h"
 #include "LoopInterface.h"
 #include "MenuController.h"
+#include "PumpCalibrator.h"
 
-
-enum ProcessorState {
-    ProcessorStateMenu = 0,
-    ProcessorStateRunning,
-    ProcessorStateCalibration
-};
-
-class Processor: public LoopInterface, KeyboardManagerDelegate, MenuControllerDelegate, PumpControllerDelegate
+class Orchestrator: public LoopInterface, KeyboardManagerDelegate, MenuControllerDelegate, PumpControllerDelegate, PumpCalibratorDelegate
 {
 public:
-    Processor(PumpController*, KeyboardManager*, MenuController*);
+    Orchestrator(PumpController*, KeyboardManager*, MenuController*, PumpCalibrator*);
 
     PumpController *pumpController;
     KeyboardManager *keyboardManager;
     MenuController *menuController;
+    PumpCalibrator *pumpCalibrator;
 
     // MAKR: - LoopInterface interface
     void loop();
@@ -35,10 +30,12 @@ public:
     // MARK: - PumpControllerDelegate
     void pumpControllerDidPressMenu();
 
+    // MARK: - PumpCalibratorDelegate
+    void pumpCalibratorDidFinishWithSpeedToMillilitersRatio(float);
+
 private:
     KeyPressable *currentKeyHandler;
-    ProcessorState state;
-    void setState(ProcessorState state);
+    void showMenu();
 };
 
-#endif /* Processor_h */
+#endif /* Orchestrator_h */

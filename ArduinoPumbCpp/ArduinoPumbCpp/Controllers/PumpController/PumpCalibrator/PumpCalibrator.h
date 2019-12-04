@@ -9,7 +9,7 @@
 
 class PumpCalibratorDelegate {
 public:
-    virtual void pumpCalibratorDidFinish(float) = 0;
+    virtual void pumpCalibratorDidFinishWithSpeedToMillilitersRatio(float) = 0;
 };
 
 class PumpCalibrator: public KeyPressable {
@@ -26,8 +26,8 @@ public:
     void calibrate();
 
 private:
-    float calibratedVolume = 1;
-    float calibrationMutliplier = 1;
+    float calibratedVolume = 1; // ml
+    float calibrationStep = 1; // ml
 
     void printCalibration(float);
     void increaseAmount();

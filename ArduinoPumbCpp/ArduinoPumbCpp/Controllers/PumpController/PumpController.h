@@ -28,12 +28,13 @@ public:
     void run();
     void stop();
 
-    void calibrate();
+    void applyCalibratedSpeedRatio(float);
 
 private:
     PumpConfiguration pumpConfiguration;
     void increaseSpeed();
     void decreaseSpeed();
+    void saveConfiguration();
 };
 
 

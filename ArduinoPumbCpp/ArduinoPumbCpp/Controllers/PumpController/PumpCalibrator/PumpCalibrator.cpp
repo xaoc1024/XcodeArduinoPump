@@ -1,9 +1,9 @@
 #include "PumpCalibrator.h"
 
-#define CALIBRATION_SPEED 6000 // TODO: set it correctly
-#define MINUTE (60 * 1000)
-#define HOUR (60 * MINUTE)
-#define CALIBRATION_TIME MINUTE // ms
+#define CALIBRATION_SPEED 6000 // TODO: set the appropriate number to make calibration process decent
+#define MINUTE (60 * 1000) // in milliseconds
+#define HOUR (60 * MINUTE) // in milliseconds
+#define CALIBRATION_TIME MINUTE // in milliseconds
 
 PumpCalibrator::PumpCalibrator(EngineController *engine, LiquidCrystal* liquidCrystal) {
     this->engine = engine;
@@ -32,19 +32,21 @@ void PumpCalibrator::pressKey(KeyboardKey theKey) {
             break;
 
         case KeyboardKeyLeft:
-            if (calibrationMutliplier > 0.01) {
-                calibrationMutliplier /= 10.0;
+            if (calibrationStep > 0.01) {
+                calibrationStep /= 10.0;
             }
             break;
 
         case KeyboardKeyRight:
-            if (calibrationMutliplier < 100.0) {
-                calibrationMutliplier *= 10.0;
+            if (calibrationStep < 100.0) {
+                calibrationStep *= 10.0;
             }
             break;
 
         case KeyboardKeySelect:
-            delegate->pumpCalibratorDidFinish(CALIBRATION_SPEED / (calibratedVolume * (HOUR / float(CALIBRATION_TIME))));
+            if (delegate != NULL) {
+                delegate->pumpCalibratorDidFinishWithSpeedToMillilitersRatio(CALIBRATION_SPEED / (calibratedVolume * (HOUR / float(CALIBRATION_TIME))));
+            }
             break;
 
         default:
@@ -57,19 +59,19 @@ void PumpCalibrator::printCalibration(float calibration) {
     lcd->setCursor(0, 0);
     lcd->print("ML x");
     lcd->setCursor(5, 0);
-    lcd->print(calibrationMutliplier);
+    lcd->print(calibrationStep);
     lcd->setCursor(0, 1);
     lcd->print(calibration);
 }
 
 void PumpCalibrator::increaseAmount() {
-    calibratedVolume += calibrationMutliplier;
+    calibratedVolume += calibrationStep;
     printCalibration(calibratedVolume);
 }
 
 void PumpCalibrator::decreaseAmount() {
-    if (calibratedVolume > 1) {
-        calibratedVolume -= calibrationMutliplier;
+    if ((calibratedVolume - calibrationStep) >= 1.0) {
+        calibratedVolume -= calibrationStep;
         printCalibration(calibratedVolume);
     }
 }

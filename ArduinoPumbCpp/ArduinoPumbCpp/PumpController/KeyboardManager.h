@@ -10,6 +10,12 @@ public:
     virtual void keyboardManagerDidReadKey(KeyboardKey) = 0;
 };
 
+struct KeyInProgress {
+    KeyboardKey currentKey;
+    unsigned long timestamp;
+};
+
+
 class KeyboardManager: public LoopInterface
 {
 public:
@@ -22,6 +28,7 @@ public:
 
 private:
     KeyboardKey readKey();
+    KeyInProgress keyInProgress;
 };
 
 #endif /* KeyboardManager_h */

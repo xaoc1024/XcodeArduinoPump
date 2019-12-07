@@ -1,7 +1,7 @@
 #include "KeyboardManager.h"
 
-/// Time (in milliseconds) the key is needed to be pressed in order to be recognized. If key is pressed for less period of time, than thisthreshold, it won't be recognized. If key if pressed for longer period of time, if will be recognized x times, where x = floor(time / threshold)
-static unsigned int kKeyRecognitionThresholdMs = 200; // 100 ms;
+/// Time (in milliseconds) for which the key must be pressed in order to be recognized. If key is pressed for less period of time, than this threshold, then it won't be recognized. If key if pressed for longer period of time, it will be recognized n times, where `n = floor(time / threshold)`
+static unsigned int kKeyRecognitionThresholdMs = 200; // 200 ms;
 
 static KeyInProgress kKeyInProgressNone = {
     .currentKey = KeyboardKeyNone,

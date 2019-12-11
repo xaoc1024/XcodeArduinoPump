@@ -12,6 +12,9 @@
 #include <iostream>
 typedef std::string String;
 
+
+#define XCODE
+
 #ifdef __cplusplus
 extern "C"{
 #endif

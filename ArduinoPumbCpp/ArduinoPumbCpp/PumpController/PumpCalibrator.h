@@ -5,7 +5,12 @@
 #include "EngineController.h"
 #include "I2CMemoryManager.h"
 #include "KeyPressable.h"
+
+#ifdef XCODE
 #include "LiquidCrystal.h"
+#else
+#include <LiquidCrystal.h>
+#endif
 
 class PumpCalibratorDelegate {
 public:

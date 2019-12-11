@@ -3,8 +3,13 @@
 
 #include "Arduino.h"
 #include "KeyboardManager.h"
-#include "LiquidCrystal.h"
 #include "KeyPressable.h"
+
+#ifdef XCODE
+#include "LiquidCrystal.h"
+#else
+#include <LiquidCrystal.h>
+#endif
 
 enum MenuItemType {
     MenuItemTypeRun = 0,

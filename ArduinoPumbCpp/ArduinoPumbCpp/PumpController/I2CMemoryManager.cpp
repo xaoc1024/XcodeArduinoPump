@@ -1,5 +1,10 @@
 #include "I2CMemoryManager.h"
+
+#ifdef XCODE
 #include "Wire.h"
+#else
+#include <Wire.h>
+#endif
 
 I2CMemoryManager::I2CMemoryManager(int address){
     deviceAddress = address;
